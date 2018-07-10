@@ -31,4 +31,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Role');
     }
+
+    public function store()
+    {
+        return $this->hasOne('App\Store');
+    }
 }
