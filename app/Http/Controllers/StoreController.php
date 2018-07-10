@@ -10,7 +10,6 @@ class StoreController extends Controller
      * 
      */
     function __construct(){
-        $this->middleware('auth:web');
     }
     /**
      * Display a listing of the resource.
@@ -40,7 +39,7 @@ class StoreController extends Controller
      */
     public function store(Request $request)
     {
-                
+        dd($request);           
     }
 
     /**
