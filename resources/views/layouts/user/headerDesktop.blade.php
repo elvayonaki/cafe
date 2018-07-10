@@ -19,7 +19,7 @@
                                 </div>
                                 <div class="mess__item">
                                     <div class="image img-cir img-40">
-                                        <img src="images/icon/avatar-06.jpg" alt="Michelle Moreno" />
+                                        <img src="{!! asset('images/icon/avatar-06.jpg') !!}" alt="Michelle Moreno" />
                                     </div>
                                     <div class="content">
                                         <h6>Michelle Moreno</h6>
@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="mess__item">
                                     <div class="image img-cir img-40">
-                                        <img src="images/icon/avatar-04.jpg" alt="Diane Myers" />
+                                        <img src="{!! asset('images/icon/avatar-04.jpg') !!}" alt="Diane Myers" />
                                     </div>
                                     <div class="content">
                                         <h6>Diane Myers</h6>
@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="email__item">
                                     <div class="image img-cir img-40">
-                                        <img src="images/icon/avatar-06.jpg" alt="Cynthia Harvey" />
+                                        <img src="{!! asset('images/icon/avatar-04.jpg') !!}" alt="Cynthia Harvey" />
                                     </div>
                                     <div class="content">
                                         <p>Meeting about new dashboard...</p>
@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="email__item">
                                     <div class="image img-cir img-40">
-                                        <img src="images/icon/avatar-05.jpg" alt="Cynthia Harvey" />
+                                        <img src="{!! asset('images/icon/avatar-05.jpg') !!}" alt="Cynthia Harvey" />
                                     </div>
                                     <div class="content">
                                         <p>Meeting about new dashboard...</p>
@@ -69,7 +69,7 @@
                                 </div>
                                 <div class="email__item">
                                     <div class="image img-cir img-40">
-                                        <img src="images/icon/avatar-04.jpg" alt="Cynthia Harvey" />
+                                        <img src="{!! asset('images/icon/avatar-04.jpg') !!}" alt="Cynthia Harvey" />
                                     </div>
                                     <div class="content">
                                         <p>Meeting about new dashboard...</p>
@@ -124,21 +124,21 @@
                     <div class="account-wrap">
                         <div class="account-item clearfix js-item-menu">
                             <div class="image">
-                                <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                <img src="{!! asset('images/icon/avatar-01.jpg') !!}" alt="John Doe" />
                             </div>
                             <div class="content">
-                                <a class="js-acc-btn" href="#">{{$data['nama']}}</a>
+                                <a class="js-acc-btn" href="#">{{Auth::user()->profile_user->nama}}</a>
                             </div>
                             <div class="account-dropdown js-dropdown">
                                 <div class="info clearfix">
                                     <div class="image">
                                         <a href="#">
-                                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                            <img src="{!! asset('images/icon/avatar-01.jpg') !!}" alt="John Doe" />
                                         </a>
                                     </div>
                                     <div class="content">
                                         <h5 class="name">
-                                        <a href="#">{{$data['nama']}}</a>
+                                        <a href="#">{{Auth::user()->profile_user->nama}}</a>
                                         </h5>
                                     <span class="email">{{Auth::user()->email}}</span>
                                     </div>
