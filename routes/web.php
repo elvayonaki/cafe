@@ -15,23 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => ['auth','role:admin']], function(){
-	Route::get('/', function(){
-		$data['users'] = \App\User::whereDoesntHave('roles')->get();
-		return view('admin', $data);
-	});
-});
-
-// Route untuk user yang member
-Route::group(['prefix' => 'member', 'middleware' => ['auth','role:member']], function(){
-	Route::get('/', function(){
-		return view('member');
-	});
-});
 
 Auth::routes();
-// Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix'=>'user'],function(){
+    Route::get('/store/create', 'StoreController@create')->name('store.create');
+    Route::post('/store/store', 'StoreController@store')->name('store.store');
+});
+
+Route::group(['prefix'=>'admin'],function(){
+        Route::get('/', 'AdminController@index')->name('admin');
+        Route::get('/login', 'AuthAdmin\LoginController@showLoginForm')->name('admin.login');
+        Route::post('/logout', 'AuthAdmin\LoginController@showLoginForm')->name('admin.logout');
+        Route::post('/login', 'AuthAdmin\LoginController@login')->name('admin.login.submit');
+});

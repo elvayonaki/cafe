@@ -81,7 +81,7 @@ return [
 
         'admins' => [
             'driver' => 'eloquent',
-            'table' => App\Admin::class,
+            'model' => App\Admin::class,
         ],
     ],
 
