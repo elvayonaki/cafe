@@ -44,7 +44,7 @@ class StoreController extends Controller
         // convert time to right format
         $requestData = $request->all();
         for ($i=1; $i < count($requestData->day); $i++) { 
-            if($requestData->day[$i]['open']){
+            if($requestData->day[$i]['status']){
                 $requestData[$i]['open'] = date("H:i", strtotime($requestData[$i]['open']));
                 $requestData[$i]['close'] = date("H:i", strtotime($requestData[$i]['close']));
             }

@@ -22,13 +22,6 @@ class LoginController extends Controller
     */
 
     /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    // protected $redirectTo = '/home';
-
-    /**
      * Create a new controller instance.
      *
      * @return void
@@ -72,8 +65,8 @@ class LoginController extends Controller
     }
 
     public function logout(Request $request)
-    {
-        $this->guard('admin')->logout();
+    { 
+        Auth::guard('admin')->logout();
         return redirect('/');
     }
 }

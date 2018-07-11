@@ -27,6 +27,6 @@ Route::group(['prefix'=>'user'],function(){
 Route::group(['prefix'=>'admin'],function(){
         Route::get('/', 'AdminController@index')->name('admin');
         Route::get('/login', 'AuthAdmin\LoginController@showLoginForm')->name('admin.login');
-        Route::post('/logout', 'AuthAdmin\LoginController@showLoginForm')->name('admin.logout');
+        Route::post('/logout', 'AuthAdmin\LoginController@logout')->name('admin.logout');
         Route::post('/login', 'AuthAdmin\LoginController@login')->name('admin.login.submit');
 });
