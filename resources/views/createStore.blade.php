@@ -1,4 +1,6 @@
-@extends('layouts.user') @section('content')
+@extends('layouts.user') 
+
+@section('content')
 <div class="col-lg-12">
     <div class="card">
         <div class="card-header">
@@ -100,10 +102,10 @@
                 </div>
                 <div class="row form-group">
                     <div class="col col-md-6">
-                        <input type="text" placeholder="Latitude" id="lat" class="form-control">
+                        <input type="text" placeholder="Latitude" name="lat" id="lat" class="form-control">
                     </div>
                     <div class="col col-md-6">
-                        <input type="text" placeholder="Longitude" id="lng" class="form-control">
+                        <input type="text" placeholder="Longitude" name="lang" id="lng" class="form-control">
                     </div>
                 </div>
                     <div class="col-12 checkbox">
