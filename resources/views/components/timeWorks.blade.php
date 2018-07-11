@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-2 checkbox">
                 <label for="checkbox1" class="form-check-label ">
-                    <input type="checkbox" id="checkbox1" name="day[{{$day['key']}}]" value="option1" class="form-check-input">&nbsp;&nbsp;{{$day['name']}}
+                    <input type="checkbox" id="checkbox1" name="day[{{$day['key']}}]['cheked']" value="true" class="form-check-input">&nbsp;&nbsp;{{$day['name']}}
                 </label>
             </div>
             <div class="col-9">
@@ -21,3 +21,10 @@
         @endforeach
     </div>
 </div>
+
+days.*.checked.cheked === true
+days.*.checked.cheked.open === null
+days.*.checked.cheked.close === null
+days.*.checked.cheked.open > days.*.checked.cheked.closed
+
+days.cheked
