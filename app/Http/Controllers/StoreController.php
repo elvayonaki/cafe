@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+use Validator;
 
 class StoreController extends Controller
 {
@@ -39,7 +41,14 @@ class StoreController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);          
+        //validasi
+        $validator = Validator::make($request->days, [
+            '*.status' => 'required',
+            '*.start' => 'requiredif:*.status,true|date_format:H:i|required',
+            '*.end' => 'requiredif:*.status,true|date_format:H:i|required|after:start_date',
+        ]);
+        // store data to database
+        
     }
 
     /**
