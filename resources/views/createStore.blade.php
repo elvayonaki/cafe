@@ -52,6 +52,9 @@
                     </div>
                 </div>
                 @include('components.timeWorks')
+                <div class="col-12">
+                    @include('components.maps');
+                </div>
             </form>
         </div>
         <div class="card-footer">

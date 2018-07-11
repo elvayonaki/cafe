@@ -21,10 +21,3 @@
         @endforeach
     </div>
 </div>
-
-days.*.checked.cheked === true
-days.*.checked.cheked.open === null
-days.*.checked.cheked.close === null
-days.*.checked.cheked.open > days.*.checked.cheked.closed
-
-days.cheked
