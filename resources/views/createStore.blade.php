@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-12 col-md-9">
                         <input type="text" id="text-input" name="name" placeholder="Text" class="form-control">
-                        <small class="form-text text-muted">This is a help text</small>
+                        <small class="form-text text-muted"></small>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -30,9 +30,41 @@
                         <label for="textarea-input" class=" form-control-label">Motto</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="textarea-input" id="textarea-input" rows="5" placeholder="Content..." class="form-control"></textarea>
+                        <textarea name="motto" id="textarea-input" rows="4" placeholder="Content..." class="form-control"></textarea>
                     </div>
                 </div>
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="textarea-input" class=" form-control-label">Alamat</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                            <input type="text" id="text-input" name="alamat1" placeholder="Text" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                        <div class="col col-md-3">
+                            <label for="textarea-input" class=" form-control-label">Kota</label>
+                        </div>
+                        <div class="col-12 col-md-9">
+                                <input type="text" id="text-input" name="alamat2" placeholder="Text" class="form-control">
+                        </div>
+                    </div> 
+                    <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="textarea-input" class=" form-control-label">Provinsi</label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                    <input type="text" id="text-input" name="alamat3" placeholder="Text" class="form-control">
+                            </div>
+                        </div> 
+                        <div class="row form-group">
+                                <div class="col col-md-3">
+                                    <label for="textarea-input" class=" form-control-label">Negara</label>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                        <input type="text" id="text-input" name="alamat4" placeholder="Text" class="form-control">
+                                </div>
+                            </div>               
                 <div class="row form-group">
                     <div class="col col-md-3">
                         <label for="text-input" class=" form-control-label">No Phone</label>
@@ -56,7 +88,7 @@
                         <label for="textarea-input" class=" form-control-label">Deskripsi Cafe</label>
                     </div>
                     <div class="col-12 col-md-9">
-                        <textarea name="textarea-input" id="textarea-input" rows="5" placeholder="Content..." class="form-control"></textarea>
+                        <textarea name="descrip" id="textarea-input" rows="5" placeholder="Content..." class="form-control"></textarea>
                     </div>
                 </div>
                 @include('components.timeWorks')
