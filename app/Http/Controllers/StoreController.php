@@ -41,23 +41,11 @@ class StoreController extends Controller
      */
     public function store(Request $request)
     {
-        // convert time to right format
-        $requestData = $request->all();
-        for ($i=1; $i < count($requestData->day); $i++) { 
-            if($requestData->day[$i]['status']){
-                $requestData[$i]['open'] = date("H:i", strtotime($requestData[$i]['open']));
-                $requestData[$i]['close'] = date("H:i", strtotime($requestData[$i]['close']));
-            }
-        }        
-        print_r($requestData);
-        die();        
-        $request->replace($requestData);
-
         // validasi
         $validator = Validator::make($request->day, [
             '*.status' => '',
-            '*.open' => 'required_if:*.status,==,true|date_format:H:i',
-            // '*.close' => 'requiredif:*.status,==,true|date_format:H:i|after:start_date',
+            '*.open' => 'required_if:*.status,==,true',
+            '*.close' => 'requiredif:*.status,==,true',
         ]);
 
         if ($validator->fails()) {
