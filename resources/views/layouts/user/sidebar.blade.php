@@ -26,7 +26,7 @@
                         <i class="fas fa-chart-bar"></i>Profile Toko</a>
                 </li>
                 <li>
-                    <a href="chart.html">
+                <a href="{{route('user.products')}}">
                         <i class="fas fa-chart-bar"></i>Produk</a>
                 </li>
                 <li>

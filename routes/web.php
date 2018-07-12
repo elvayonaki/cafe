@@ -17,9 +17,12 @@ Route::get('/', function () {
 
 
 Auth::routes();
-Route::get('/user', 'HomeController@index')->name('home');
 
 Route::group(['prefix'=>'user'],function(){
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/products', 'ProductController@index')->name('user.products');
+    Route::get('/products/add', 'ProductController@create')->name('user.products.add');
+    
     Route::get('/store/create', 'StoreController@create')->name('store.create');
     Route::post('/store/store', 'StoreController@store')->name('store.store');
 });
