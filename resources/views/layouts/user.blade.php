@@ -11,6 +11,7 @@
 
     <!-- Title Page-->
     <title>@yield('title')</title>
+    <link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet">
 
     <!-- Fontfaces CSS-->
     <link href="{!! asset('css/font-face.css') !!}" rel="stylesheet" media="all">

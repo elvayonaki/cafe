@@ -33,6 +33,7 @@
                                     <small class="form-text text-muted"></small>
                                 </div>
                             </div>
+                            @include('components.gallery')
                 </form>
             </div>
         </div>
