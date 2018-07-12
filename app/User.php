@@ -39,4 +39,10 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Store');
     }
+    /** 
+    * Relasi One To Many ke tabel Product
+    */
+    public function Products(){
+        return $this->belongsTo('App\Product');
+    }
 }

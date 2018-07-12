@@ -13,7 +13,7 @@
                 </li>
                 <li>
                     <a href="chart.html">
-                        <i class="fas fa-shopping-cart"></i>Pesanan</a>
+                        <i class="fas fa-shopping-cart"></i>Pesanan Anda</a>
                 </li>
                 @if(Auth::user()->role->name == 'user')
                 <li>
@@ -31,7 +31,7 @@
                 </li>
                 <li>
                     <a href="chart.html">
-                        <i class="fas fa-chart-bar"></i>Reservasi</a>
+                        <i class="fas fa-chart-bar"></i>Reservasi Produk</a>
                 </li>
 
                 @endif

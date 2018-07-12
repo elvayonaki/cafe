@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableTimeWork extends Migration
+class CreateProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,16 @@ class CreateTableTimeWork extends Migration
      */
     public function up()
     {
-        Schema::create('time_works', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('store_id')->unsigned();
-            $table->integear('day');
-            $table->time('open');
-            $table->time('close');
+            $table->string('name');
+            $table->integer('pph');
+            $table->text('descrip');
+            $table->string('status');
             $table->timestamps();
 
-            $table->foreign('store_id')->references('id')->on('stores')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('store_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
@@ -32,6 +33,6 @@ class CreateTableTimeWork extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('products');
     }
 }
